@@ -5,6 +5,33 @@ output:
 
 ---
 
+The LEDA package contains a full pipeline to link
+ethnic datasets from Africa. The main strength of LEDA
+consists in leveraging the structure of the language
+tree to provide a flexible link between any two ethnic
+group that are linked to the tree.
+
+The package allows lists of ethnic groups to be linked to each
+other using three main linkage types: binary linking based
+on the relations of sets of language nodes associated with
+two groups; binary linking based on lingustic distances;
+and a full computation of dyadic linguistic distances.
+
+Usage of a LEDA object is structured around
+\emph{lists of ethnic groups}. These lists of groups
+stem from the original datasets that have been joined
+to the language tree. Lists are structured by data source,
+country, year, or, in the case of survey data, survey rounds.
+Via the language tree, any two lists of ethnic groups
+can be linked to each other.
+
+
+For full information on the LEDA project and methodology,
+read the \href{https://github.com/carl-mc/LEDA/raw/master/docs/LEDA_paper.pdf}{paper}.
+
+When using the LEDA package, please cite:
+Müller-Crepon, Carl, Yannick Pengl, and Nils-Christian Bormann (2020).
+\emph{Linking Ethnic Data from Africa}. Unpublished working paper.
 
 
 ## Installation

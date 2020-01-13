@@ -33,7 +33,7 @@ The LEDA package contains a full pipeline to link
     read the \href{https://github.com/carl-mc/LEDA/raw/master/docs/LEDA_paper.pdf}{paper}. 
     
    When using the LEDA package, please cite:
-   Müller-Crepon, Carl, Nils-Christian Bormann, and Yannick Pengl (2020). 
+   Müller-Crepon, Carl, Yannick Pengl, and Nils-Christian Bormann (2020). 
    \emph{Linking Ethnic Data from Africa}. Unpublished working paper.
 }
 \section{Usage}{
