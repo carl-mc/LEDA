@@ -1,0 +1,18 @@
+Package: LEDA
+Title: Linking Ethnic Data from Africa
+Version: 0.1
+Authors@R: c(person("Carl", "Müller-Crepon", email = "carlvs@ethz.ch", role = c("aut", "cre")),
+             person("Yannick", "Pengl", email = "ypengl@ethz.ch", role = c("aut")),
+             person("Nils-Christian", "Bormann", email = "n.bormann@essex.ac.uk", role = c("aut")))
+Description: Provides an interface to link ethnic groups from 13 different datasets on ethnic groups in Africa to each other and calculate lingustic distances between them.
+Depends: R (>= 3.1.0)
+Imports: R6,
+    plyr,
+    igraph,
+    stringr,
+    gtools,
+    utils
+License: GPL-3
+LazyData: true
+Encoding: UTF-8
+RoxygenNote: 7.0.2
