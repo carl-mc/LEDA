@@ -18,7 +18,7 @@ two groups; binary linking based on lingustic distances;
 and a full computation of dyadic linguistic distances.
 
 Usage of a LEDA object is structured around
-\emph{lists of ethnic groups}. These lists of groups
+*lists of ethnic groups*. These lists of groups
 stem from the original datasets that have been joined
 to the language tree. Lists are structured by data source,
 country, year, or, in the case of survey data, survey rounds.
@@ -31,7 +31,7 @@ read the [paper](https://github.com/carl-mc/LEDA/raw/master/docs/LEDA_paper.pdf)
 
 When using the LEDA package, please cite:
 Müller-Crepon, Carl, Yannick Pengl, and Nils-Christian Bormann (2020).
-\emph{Linking Ethnic Data from Africa}. Unpublished working paper.
+*Linking Ethnic Data from Africa*. Unpublished working paper.
 
 
 ## Installation
