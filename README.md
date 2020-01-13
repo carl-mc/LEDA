@@ -15,7 +15,8 @@ Lists are structured by data source, country, year, or, in the case of
 survey data, survey rounds. Via the language tree, any two lists of
 ethnic groups can be linked to each other.
 
-For full information on the LEDA project and methodology, read the .
+For full information on the LEDA project and methodology, read the
+[paper](https://github.com/carl-mc/LEDA/raw/master/docs/LEDA_paper.pdf).
 
 When using the LEDA package, please cite: Müller-Crepon, Carl, Yannick
 Pengl, and Nils-Christian Bormann (2020). . Unpublished working paper.
