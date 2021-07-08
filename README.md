@@ -23,16 +23,14 @@ When using the LEDA package, please cite: Müller-Crepon, Carl, Yannick
 Pengl, and Nils-Christian Bormann (2020). *Linking Ethnic Data from
 Africa*. Unpublished working paper.
 
-Installation
-------------
+## Installation
 
 You can directly download and install the LEDA package from GitHub.
 
     library(devtools)
     install_github(repo = "carl-mc/LEDA")
 
-Initialize linking object
--------------------------
+## Initialize linking object
 
 The LEDA package is programmed in an object oriented manner. Once you
 initialize a LEDA-object, methods are applied directly to the object and
@@ -53,12 +51,13 @@ objects, all documentation can be accessed by calling `?LEDA`.
 ### Datasets included in LEDA
 
 To get a first overview of the possibilities coming with LEDA, start
-querying the 'list dictionary', which contains all metadata of all lists
+querying the ‘list dictionary’, which contains all metadata of all lists
 of ethnic groups that the LEDA project links to the Ethnologue language
-tree. Lists are identified by their country, the type of dataset (e.g.
-EPR, Afrobarometer, DHS), the variable that identifies ethnic groups in
-that dataset, the type of ethnic marker (language, ethnic group, mother
-tongue), as well as year or survey-round identifiers where appropriate.
+tree. Lists are identified by their country, the type of dataset
+(e.g. EPR, Afrobarometer, DHS), the variable that identifies ethnic
+groups in that dataset, the type of ethnic marker (language, ethnic
+group, mother tongue), as well as year or survey-round identifiers where
+appropriate.
 
     # Retrieve dataset dictionary
     list.dict <- leda$get_list_dict()
@@ -81,8 +80,7 @@ tongue), as well as year or survey-round identifiers where appropriate.
     ##  [5] "Fearon"        "FRT"           "GREG"          "Murdock_Map"  
     ##  [9] "IPUMS"         "Afrobarometer" "WLMS"          "PREG"
 
-Link data sets
---------------
+## Link data sets
 
 Once familiar with the lists of ethnic groups that are part of the LEDA
 object, we can proceed to link the groups contained in any two lists of
@@ -96,7 +94,7 @@ on the language tree that groups *a* and *b* share. In the example
 below, we link two groups to each other as soon as they are associated
 with at least one common dialect on the language tree
 (`link.level = "dialect"`). As one specifies link levels closer to the
-root of the language tree, i.e. by setting `link.level = "language"` or
+root of the language tree, i.e. by setting `link.level = "language"` or
 `link.level = 5` (language tree level 5 of 16), the number of groups *b*
 linked to *a* increases and links become less precise.
 
@@ -157,16 +155,16 @@ subsets the distance matrix to return the links queried by the user.
 The algorithm computes the full linguistic distance matrix between
 groups in lists *A* and *B*. Via the parameter `level`, users can
 specify whether they want links to be based on distances between ethnic
-groups' `"language"` or `"dialect`. As before, it is sensible to not
+groups’ `"language"` or `"dialect`. As before, it is sensible to not
 link lists across country borders by setting `by.country = T`.
 
 The linguistic distance between two languages or dialects
 *L*<sub>1</sub> and *L*<sub>2</sub> is computed as :
 
-1 − ((*d*(*L*<sub>1</sub>, *R*)+*d*(*L*<sub>2</sub>, *R*)−*d*(*L*<sub>1</sub>, *L*<sub>2</sub>))/(*d*(*L*<sub>1</sub>, *R*)+*d*(*L*<sub>2</sub>, *R*))))<sup>*δ*</sup>
+1 − ((*d*(*L*<sub>1</sub>, *R*) + *d*(*L*<sub>2</sub>, *R*) − *d*(*L*<sub>1</sub>, *L*<sub>2</sub>))/(*d*(*L*<sub>1</sub>, *R*) + *d*(*L*<sub>2</sub>, *R*))))<sup>*δ*</sup>
 
 where *d*(*L*<sub>*i*</sub>, *R*) is the length of path from a language
-to the tree's origin and *d*(*L*<sub>1</sub>, *L*<sub>2</sub>) is the
+to the tree’s origin and *d*(*L*<sub>1</sub>, *L*<sub>2</sub>) is the
 length of the shortest path from the first to the second language. *δ*
 is an exponent to discount short distances on the tree, reflected in the
 parameter `delta` below. Lastly, there are two ways to locate languages
@@ -261,8 +259,7 @@ groups *b* that fall within a specified distance `max.distance` of group
     ## 5 Japhadhola Padhola Afrobarometer    FRT 0.0000000
     ## 6      Kakwa   Kakwa Afrobarometer    FRT 0.0000000
 
-Inspect coding of the ethnic group &lt;--&gt; language link
------------------------------------------------------------
+## Inspect coding of the ethnic group &lt;–&gt; language link
 
 Sometimes, one might want to inspect the origins of a link between to
 groups. LEDA allows that by giving access to the entire raw data that
@@ -271,10 +268,10 @@ and the language tree with the following method.
 
 The resulting table contains one column `link` that contains the
 language tree nodes linked to any group. Note that in cases of multiple
-links, they are separated by a '|'. In most cases, the level of a node
+links, they are separated by a ‘|’. In most cases, the level of a node
 on the language tree is indicated in squared brackets behind the nodes
-name. L1 to L14 indicate super-languages, 'lang' denotes languages,
-'iso' language isocodes, and 'dial' refers to dialects.
+name. L1 to L14 indicate super-languages, ‘lang’ denotes languages,
+‘iso’ language isocodes, and ‘dial’ refers to dialects.
 
     ## Query raw link data
     raw_ethno_links <- leda$get_raw_ethnolinks(param_list = list(type = "Afrobarometer",
@@ -293,8 +290,7 @@ name. L1 to L14 indicate super-languages, 'lang' denotes languages,
     ## Afrobarometer.5 Afrobarometer      Kakwa   Kakwa [org]
     ## Afrobarometer.6 Afrobarometer  Kiswahili Swahili [org]
 
-Add new links from groups to language tree
-------------------------------------------
+## Add new links from groups to language tree
 
 Having gained familiarity with the available ethnic links and methods,
 users can go a step further and link new lists of ethnic groups to the
@@ -309,7 +305,7 @@ language tree. However, this may be less tedious than it sounds. Via the
 method `LEDA$prepare_newlink_table()` one can access automatically
 generated suggestions to which language node(s) a particular group may
 link. These suggestions are generated via a fuzzy string match of a
-group's name to the names of (1) language nodes themselves, and (2) the
+group’s name to the names of (1) language nodes themselves, and (2) the
 names of ethnic groups already matched to the language tree. Thus, with
 every additional list of ethnic groups added to the data, linking new
 ones to the language tree becomes easier.
@@ -366,7 +362,7 @@ secondary sources.
 Having hand-coded the link between the new list of ethnic groups and the
 language tree, one can now add the new list of groups to the LEDA
 object. The list now enters the object in the same manner as all
-'native' LEDA lists, as well as any lists added beforehand.
+‘native’ LEDA lists, as well as any lists added beforehand.
 
     ## First we need to encode links to the lanugage tree:
     newlink.df$link[newlink.df$group == "Alur"] <- "Alur [L9]"
@@ -429,9 +425,15 @@ LEDA object, in the same way as discussed above.
 Given that the value of LEDA increases exponentially with the number of
 lists available in the R-package, we would greatly appreciate if you
 could share any new lists that you link to the language tree. New lists
-can be new rounds of survey data (e.g. Afrobarometer, DHS) or any list
+can be new rounds of survey data (e.g. Afrobarometer, DHS) or any list
 of ethnic groups that is based on publicly available data. You can do so
 by sending us an email to carlvs /at/ ethz.ch or opening an issue with
-the attached link file via LEDA's Github page. Shared link files should
+the attached link file via LEDA’s Github page. Shared link files should
 have the format returned by the method `LEDA$prepare_newlink_table()`
 and have the `link` column filled wherever possible.
+
+## Change Log
+
+5.5.2020: Added DHS Rounds 7 to LEDA
+
+8.7.2021: Corrected language tree error for Lomwe, Malawi.

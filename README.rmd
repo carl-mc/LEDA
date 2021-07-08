@@ -306,3 +306,11 @@ head(setlink[, c("a.group", "b.group", "a.type", "b.type")])
 ### Submit new lists to LEDA project
 
 Given that the value of LEDA increases exponentially with the number of lists available in the R-package, we would greatly appreciate if you could share any new lists that you link to the language tree. New lists can be new rounds of survey data (e.g. Afrobarometer, DHS) or any list of ethnic groups that is based on publicly available data. You can do so by sending us an email to carlvs /at/ ethz.ch or opening an issue with the attached link file via LEDA's Github page. Shared link files should have the format returned by the method `LEDA$prepare_newlink_table()` and have the `link` column filled wherever possible. 
+
+## Change Log
+
+5.5.2020: Added DHS Rounds 7 to LEDA
+
+8.7.2021: Corrected language tree error for Lomwe, Malawi. 
+
+
