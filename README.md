@@ -17,11 +17,11 @@ language tree, any two lists of ethnic groups can be linked to each
 other.
 
 For full information on the LEDA project and methodology, read the
-[paper](https://github.com/carl-mc/LEDA/raw/master/docs/LEDA_paper.pdf).
+paper [here](https://github.com/carl-mc/LEDA/raw/master/docs/LEDA_paper.pdf) or at the [Journal of Peace Research](https://journals.sagepub.com/doi/10.1177/00223433211016528).
 
 When using the LEDA package, please cite: Müller-Crepon, Carl, Yannick
-Pengl, and Nils-Christian Bormann (2020). *Linking Ethnic Data from
-Africa*. Unpublished working paper.
+Pengl, and Nils-Christian Bormann (2021). *Linking Ethnic Data from
+Africa*. Journal of Peace Research, Online First.
 
 ## Installation
 
