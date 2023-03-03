@@ -20,8 +20,8 @@ For full information on the LEDA project and methodology, read the
 paper [here](https://github.com/carl-mc/LEDA/raw/master/docs/LEDA_paper.pdf) or at the [Journal of Peace Research](https://journals.sagepub.com/doi/10.1177/00223433211016528).
 
 When using the LEDA package, please cite: Müller-Crepon, Carl, Yannick
-Pengl, and Nils-Christian Bormann (2021). *Linking Ethnic Data from
-Africa*. Journal of Peace Research, Online First.
+Pengl, and Nils-Christian Bormann (2021). Linking Ethnic Data from
+Africa. _Journal of Peace Research, 59_(3), 425–435.
 
 ## Installation
 
