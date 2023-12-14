@@ -44,8 +44,8 @@
 #'     read the \href{https://github.com/carl-mc/LEDA/raw/master/docs/LEDA_paper.pdf}{paper}. 
 #'     
 #'    When using the LEDA package, please cite:
-#'    Müller-Crepon, Carl, Yannick Pengl, and Nils-Christian Bormann (2020). 
-#'    Linking Ethnic Data from Africa. \emph{Journal of Peace Research 59}(3), 425–435
+#'    Müller-Crepon, Carl, Yannick Pengl, and Nils-Christian Bormann (2022). 
+#'    Linking Ethnic Data from Africa. \emph{Journal of Peace Research 59}(3), 425–435.
 #'      
 #'
 #' @name LEDA
