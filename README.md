@@ -23,6 +23,13 @@ When using the LEDA package, please cite: Müller-Crepon, Carl, Yannick
 Pengl, and Nils-Christian Bormann (2020). *Linking Ethnic Data from
 Africa*. Journal of Peace Research, 59(3), 425–435.
 
+## Updates
+
+*12. June 2024*: Added links to Afrobarometer Rounds 7 and 8. Thanks to
+[Vladimir Chlouba](https://www.vladimirchlouba.com/) for the help with
+coding these (he coded the ethnicity variables, Carl Müller-Crepon added
+the languages)!
+
 ## Installation
 
 You can directly download and install the LEDA package from GitHub.
@@ -65,13 +72,13 @@ appropriate.
     # Show first entries
     head(list.dict)
 
-    ##     list.id type cowcode iso3c       marker groupvar year round subround
-    ## 1:1       1 AMAR     404   GNB ethnic group    Group   NA    NA       NA
-    ## 1:2       2 AMAR     420   GMB ethnic group    Group   NA    NA       NA
-    ## 1:3       3 AMAR     432   MLI ethnic group    Group   NA    NA       NA
-    ## 1:4       4 AMAR     433   SEN ethnic group    Group   NA    NA       NA
-    ## 1:5       5 AMAR     434   BEN ethnic group    Group   NA    NA       NA
-    ## 1:6       6 AMAR     435   MRT ethnic group    Group   NA    NA       NA
+    ##   iso3c       marker round cowcode type list.id groupvar year subround variable
+    ## 1   GNB ethnic group    NA     404 AMAR       1    Group   NA       NA     <NA>
+    ## 2   GMB ethnic group    NA     420 AMAR       2    Group   NA       NA     <NA>
+    ## 3   MLI ethnic group    NA     432 AMAR       3    Group   NA       NA     <NA>
+    ## 4   SEN ethnic group    NA     433 AMAR       4    Group   NA       NA     <NA>
+    ## 5   BEN ethnic group    NA     434 AMAR       5    Group   NA       NA     <NA>
+    ## 6   MRT ethnic group    NA     435 AMAR       6    Group   NA       NA     <NA>
 
     # All data types
     unique(list.dict$type)
@@ -110,7 +117,7 @@ country borders by setting `by.country = T`.
     ## Link all Afrobarometer groups (rounds 1-5) in Uganda to the FRT data.
     setlink <- leda$link_set(lists.a = list(type = c("Afrobarometer"),  
                                             iso3c = c("UGA"),
-                                            round = 4, marker = "language"),
+                                            round = 8, marker = "language"),
                                     lists.b = list(type = c("FRT"),
                                                    iso3c = c("UGA")),
                                     link.level = "dialect",
@@ -123,12 +130,12 @@ country borders by setting `by.country = T`.
     head(setlink[, c("a.group", "b.group", "a.type", "b.type")])
 
     ##      a.group b.group        a.type b.type
-    ## 1     Acholi  Acholi Afrobarometer    FRT
-    ## 2       Alur    Alur Afrobarometer    FRT
-    ## 3      Ateso    Teso Afrobarometer    FRT
-    ## 4 Japhadhola Padhola Afrobarometer    FRT
-    ## 5      Kakwa   Kakwa Afrobarometer    FRT
-    ## 6  Kiswahili    <NA> Afrobarometer   <NA>
+    ## 1    Luganda   Ganda Afrobarometer    FRT
+    ## 2 Runyankole  Ankole Afrobarometer    FRT
+    ## 3    Lugbara Lugbara Afrobarometer    FRT
+    ## 4    English    <NA> Afrobarometer   <NA>
+    ## 5     Lusoga    Soga Afrobarometer    FRT
+    ## 6   Lukhonzo   Konjo Afrobarometer    FRT
 
 One can further refine the link by constraining the arguments
 `drop.a.threshold` and `drop.b.threshold` that control the shares of
@@ -161,10 +168,10 @@ link lists across country borders by setting `by.country = T`.
 The linguistic distance between two languages or dialects
 *L*<sub>1</sub> and *L*<sub>2</sub> is computed as :
 
-1 − ((*d*(*L*<sub>1</sub>, *R*) + *d*(*L*<sub>2</sub>, *R*) − *d*(*L*<sub>1</sub>, *L*<sub>2</sub>))/(*d*(*L*<sub>1</sub>, *R*) + *d*(*L*<sub>2</sub>, *R*))))<sup>*δ*</sup>
+1 − ((*d*(*L*<sub>1</sub>,*R*)+*d*(*L*<sub>2</sub>,*R*)−*d*(*L*<sub>1</sub>,*L*<sub>2</sub>))/(*d*(*L*<sub>1</sub>,*R*)+*d*(*L*<sub>2</sub>,*R*))))<sup>*δ*</sup>
 
-where *d*(*L*<sub>*i*</sub>, *R*) is the length of path from a language
-to the tree’s origin and *d*(*L*<sub>1</sub>, *L*<sub>2</sub>) is the
+where *d*(*L*<sub>*i*</sub>,*R*) is the length of path from a language
+to the tree’s origin and *d*(*L*<sub>1</sub>,*L*<sub>2</sub>) is the
 length of the shortest path from the first to the second language. *δ*
 is an exponent to discount short distances on the tree, reflected in the
 parameter `delta` below. Lastly, there are two ways to locate languages
@@ -196,12 +203,12 @@ aggregated to arrive at a single distance between *a* and *b*.
     head(distance.df[, c("a.group", "b.group", "a.type", "b.type", "distance")])
 
     ##                       a.group b.group        a.type b.type  distance
-    ## Afrobarometer.94664    Acholi  Acholi Afrobarometer    FRT 0.0000000
-    ## Afrobarometer.94664.1  Acholi    Alur Afrobarometer    FRT 0.1471971
-    ## Afrobarometer.94664.2  Acholi  Ankole Afrobarometer    FRT 1.0000000
-    ## Afrobarometer.94664.3  Acholi   Ganda Afrobarometer    FRT 1.0000000
-    ## Afrobarometer.94664.4  Acholi    Gisu Afrobarometer    FRT 1.0000000
-    ## Afrobarometer.94664.5  Acholi   Gwere Afrobarometer    FRT 1.0000000
+    ## Afrobarometer.94698    Acholi  Acholi Afrobarometer    FRT 0.0000000
+    ## Afrobarometer.94698.1  Acholi    Alur Afrobarometer    FRT 0.1471971
+    ## Afrobarometer.94698.2  Acholi  Ankole Afrobarometer    FRT 1.0000000
+    ## Afrobarometer.94698.3  Acholi   Ganda Afrobarometer    FRT 1.0000000
+    ## Afrobarometer.94698.4  Acholi    Gisu Afrobarometer    FRT 1.0000000
+    ## Afrobarometer.94698.5  Acholi   Gwere Afrobarometer    FRT 1.0000000
 
 ### Link to closest linguistic neighbours
 

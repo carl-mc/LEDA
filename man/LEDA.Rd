@@ -297,25 +297,25 @@ head(setlink[, c("a.group", "b.group", "a.type", "b.type", "a.list.id", "b.list.
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{LEDA$new()}}
-\item \href{#method-show_list_parameters}{\code{LEDA$show_list_parameters()}}
-\item \href{#method-get_list_dict}{\code{LEDA$get_list_dict()}}
-\item \href{#method-get_list_dict_subset}{\code{LEDA$get_list_dict_subset()}}
-\item \href{#method-get_list_ids}{\code{LEDA$get_list_ids()}}
-\item \href{#method-link_set}{\code{LEDA$link_set()}}
-\item \href{#method-ling_distance}{\code{LEDA$ling_distance()}}
-\item \href{#method-link_withinlingdist}{\code{LEDA$link_withinlingdist()}}
-\item \href{#method-link_minlingdist}{\code{LEDA$link_minlingdist()}}
-\item \href{#method-get_raw_ethnolinks}{\code{LEDA$get_raw_ethnolinks()}}
-\item \href{#method-get_types}{\code{LEDA$get_types()}}
-\item \href{#method-prepare_newlink_table}{\code{LEDA$prepare_newlink_table()}}
-\item \href{#method-add_tree_links}{\code{LEDA$add_tree_links()}}
-\item \href{#method-clone}{\code{LEDA$clone()}}
+\item \href{#method-LEDA-new}{\code{LEDA$new()}}
+\item \href{#method-LEDA-show_list_parameters}{\code{LEDA$show_list_parameters()}}
+\item \href{#method-LEDA-get_list_dict}{\code{LEDA$get_list_dict()}}
+\item \href{#method-LEDA-get_list_dict_subset}{\code{LEDA$get_list_dict_subset()}}
+\item \href{#method-LEDA-get_list_ids}{\code{LEDA$get_list_ids()}}
+\item \href{#method-LEDA-link_set}{\code{LEDA$link_set()}}
+\item \href{#method-LEDA-ling_distance}{\code{LEDA$ling_distance()}}
+\item \href{#method-LEDA-link_withinlingdist}{\code{LEDA$link_withinlingdist()}}
+\item \href{#method-LEDA-link_minlingdist}{\code{LEDA$link_minlingdist()}}
+\item \href{#method-LEDA-get_raw_ethnolinks}{\code{LEDA$get_raw_ethnolinks()}}
+\item \href{#method-LEDA-get_types}{\code{LEDA$get_types()}}
+\item \href{#method-LEDA-prepare_newlink_table}{\code{LEDA$prepare_newlink_table()}}
+\item \href{#method-LEDA-add_tree_links}{\code{LEDA$add_tree_links()}}
+\item \href{#method-LEDA-clone}{\code{LEDA$clone()}}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-LEDA-new"></a>}}
+\if{latex}{\out{\hypertarget{method-LEDA-new}{}}}
 \subsection{Method \code{new()}}{
 Initialize a new LEDA object
 \subsection{Usage}{
@@ -334,8 +334,8 @@ leda.obj <- LEDA$new()
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-show_list_parameters"></a>}}
-\if{latex}{\out{\hypertarget{method-show_list_parameters}{}}}
+\if{html}{\out{<a id="method-LEDA-show_list_parameters"></a>}}
+\if{latex}{\out{\hypertarget{method-LEDA-show_list_parameters}{}}}
 \subsection{Method \code{show_list_parameters()}}{
 Returns a vector with the variables that define
    lists of ethnic groups in different datasets.
@@ -388,8 +388,8 @@ leda$show_list_parameters()
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get_list_dict"></a>}}
-\if{latex}{\out{\hypertarget{method-get_list_dict}{}}}
+\if{html}{\out{<a id="method-LEDA-get_list_dict"></a>}}
+\if{latex}{\out{\hypertarget{method-LEDA-get_list_dict}{}}}
 \subsection{Method \code{get_list_dict()}}{
 Returns the full dictionary of lists of ethnic groups that
    are included in the LEDA project. An example of a list is the 
@@ -416,8 +416,8 @@ head(list.dict)
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get_list_dict_subset"></a>}}
-\if{latex}{\out{\hypertarget{method-get_list_dict_subset}{}}}
+\if{html}{\out{<a id="method-LEDA-get_list_dict_subset"></a>}}
+\if{latex}{\out{\hypertarget{method-LEDA-get_list_dict_subset}{}}}
 \subsection{Method \code{get_list_dict_subset()}}{
 Returns a subset of the dictionary of lists of ethnic groups that
    are included in the LEDA project. An example of a list is the 
@@ -479,8 +479,8 @@ leda$get_list_dict_subset(param_list =
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get_list_ids"></a>}}
-\if{latex}{\out{\hypertarget{method-get_list_ids}{}}}
+\if{html}{\out{<a id="method-LEDA-get_list_ids"></a>}}
+\if{latex}{\out{\hypertarget{method-LEDA-get_list_ids}{}}}
 \subsection{Method \code{get_list_ids()}}{
 Returns the a subset of the IDs of lists of ethnic groups that
    are included in the LEDA project.
@@ -541,8 +541,8 @@ leda$get_list_ids(param_list =
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-link_set"></a>}}
-\if{latex}{\out{\hypertarget{method-link_set}{}}}
+\if{html}{\out{<a id="method-LEDA-link_set"></a>}}
+\if{latex}{\out{\hypertarget{method-LEDA-link_set}{}}}
 \subsection{Method \code{link_set()}}{
 Returns a link table of ethnic groups contained in lists \emph{A} and \emph{B},
   based on their set relation. At the baseline, groups \emph{a} to \emph{b} are linked to each other
@@ -650,8 +650,8 @@ head(setlink)
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-ling_distance"></a>}}
-\if{latex}{\out{\hypertarget{method-ling_distance}{}}}
+\if{html}{\out{<a id="method-LEDA-ling_distance"></a>}}
+\if{latex}{\out{\hypertarget{method-LEDA-ling_distance}{}}}
 \subsection{Method \code{ling_distance()}}{
 Returns a table of linguistic distances between all ethnic groups 
   contained in lists \emph{A} and \emph{B}. The 
@@ -767,8 +767,8 @@ head(ling.distance)
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-link_withinlingdist"></a>}}
-\if{latex}{\out{\hypertarget{method-link_withinlingdist}{}}}
+\if{html}{\out{<a id="method-LEDA-link_withinlingdist"></a>}}
+\if{latex}{\out{\hypertarget{method-LEDA-link_withinlingdist}{}}}
 \subsection{Method \code{link_withinlingdist()}}{
 Returns a link table of ethnic groups contained in lists \emph{A} and \emph{B}. 
   Each for each list of ethnic groups in \emph{A} and \emph{B}, each group \emph{a} is linked to 
@@ -883,8 +883,8 @@ head(link.withindist)
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-link_minlingdist"></a>}}
-\if{latex}{\out{\hypertarget{method-link_minlingdist}{}}}
+\if{html}{\out{<a id="method-LEDA-link_minlingdist"></a>}}
+\if{latex}{\out{\hypertarget{method-LEDA-link_minlingdist}{}}}
 \subsection{Method \code{link_minlingdist()}}{
 Returns a link table of ethnic groups contained in lists \emph{A} and \emph{B}. 
   Each for each list of ethnic groups in \emph{A} and \emph{B}, each group \emph{a} is linked to its closest 
@@ -995,8 +995,8 @@ head(link.mindist)
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get_raw_ethnolinks"></a>}}
-\if{latex}{\out{\hypertarget{method-get_raw_ethnolinks}{}}}
+\if{html}{\out{<a id="method-LEDA-get_raw_ethnolinks"></a>}}
+\if{latex}{\out{\hypertarget{method-LEDA-get_raw_ethnolinks}{}}}
 \subsection{Method \code{get_raw_ethnolinks()}}{
 Retrieve the raw coding of links 
    between ethnic groups
@@ -1058,8 +1058,8 @@ leda$get_raw_ethnolinks(param_list =
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get_types"></a>}}
-\if{latex}{\out{\hypertarget{method-get_types}{}}}
+\if{html}{\out{<a id="method-LEDA-get_types"></a>}}
+\if{latex}{\out{\hypertarget{method-LEDA-get_types}{}}}
 \subsection{Method \code{get_types()}}{
 Get types of group lists in LEDA object
 \subsection{Usage}{
@@ -1080,8 +1080,8 @@ leda$get_types()
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-prepare_newlink_table"></a>}}
-\if{latex}{\out{\hypertarget{method-prepare_newlink_table}{}}}
+\if{html}{\out{<a id="method-LEDA-prepare_newlink_table"></a>}}
+\if{latex}{\out{\hypertarget{method-LEDA-prepare_newlink_table}{}}}
 \subsection{Method \code{prepare_newlink_table()}}{
 Based on an input of ethnic group
   names, the function returns a link table between 
@@ -1239,8 +1239,8 @@ newlink.df <- leda$prepare_newlink_table(
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-add_tree_links"></a>}}
-\if{latex}{\out{\hypertarget{method-add_tree_links}{}}}
+\if{html}{\out{<a id="method-LEDA-add_tree_links"></a>}}
+\if{latex}{\out{\hypertarget{method-LEDA-add_tree_links}{}}}
 \subsection{Method \code{add_tree_links()}}{
 Function to add a table that links a list of ethnic groups 
   with nodes on the language tree to the LEDA object.
@@ -1335,8 +1335,8 @@ head(setlink[, c("a.group", "b.group", "a.type", "b.type", "a.list.id", "b.list.
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-LEDA-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-LEDA-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

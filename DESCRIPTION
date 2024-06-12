@@ -1,6 +1,6 @@
 Package: LEDA
 Title: Linking Ethnic Data from Africa
-Version: 0.1
+Version: 0.2
 Authors@R: c(person("Carl", "Müller-Crepon", email = "carlvs@ethz.ch", role = c("aut", "cre")),
              person("Yannick", "Pengl", email = "ypengl@ethz.ch", role = c("aut")),
              person("Nils-Christian", "Bormann", email = "n.bormann@essex.ac.uk", role = c("aut")))
@@ -15,4 +15,4 @@ Imports: R6,
 License: GPL-3
 LazyData: true
 Encoding: UTF-8
-RoxygenNote: 7.1.1
+RoxygenNote: 7.3.1
