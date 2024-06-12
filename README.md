@@ -21,7 +21,7 @@ For full information on the LEDA project and methodology, read the
 
 When using the LEDA package, please cite: Müller-Crepon, Carl, Yannick
 Pengl, and Nils-Christian Bormann (2020). *Linking Ethnic Data from
-Africa*. Unpublished working paper.
+Africa*. Journal of Peace Research, 59(3), 425–435.
 
 ## Installation
 
